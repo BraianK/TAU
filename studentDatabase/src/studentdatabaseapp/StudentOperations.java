@@ -7,7 +7,7 @@ public class StudentOperations {
 
 	}
 	public boolean isTuitionToPay(float tuitionBalance) {
-		if(tuitionBalance >= 0) {
+		if(tuitionBalance > 0) {
 			return true;
 		}else {
 			return false;

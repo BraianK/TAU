@@ -22,6 +22,11 @@ class StudentOperationsTest {
         boolean isTuitionToPay = opr.isTuitionToPay(tuitionBalance);
         assertEquals(true, isTuitionToPay);
     }
-	
+	@Test
+    public void isNotTuitionToPayTest() {
+		float tuitionBalance = 0;
+        boolean isTuitionToPay = opr.isTuitionToPay(tuitionBalance);
+        assertEquals(false, isTuitionToPay);
+    }
 
 }

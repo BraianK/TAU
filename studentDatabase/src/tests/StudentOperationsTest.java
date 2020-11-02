@@ -11,22 +11,34 @@ class StudentOperationsTest {
 	StudentOperations opr = new StudentOperations();  
 
 	@Test
-    public void discountTest() {
+    public void testDiscountTest() {
          
         float result = opr.discount(600);
         assertEquals(180, result);
     }
 	@Test
-    public void isTuitionToPayTest() {
+    public void testIsTuitionToPayTest() {
 		float tuitionBalance = 600;
         boolean isTuitionToPay = opr.isTuitionToPay(tuitionBalance);
         assertEquals(true, isTuitionToPay);
     }
 	@Test
-    public void isNotTuitionToPayTest() {
+    public void testIsNotTuitionToPayTest() {
 		float tuitionBalance = 0;
         boolean isTuitionToPay = opr.isTuitionToPay(tuitionBalance);
         assertEquals(false, isTuitionToPay);
     }
+	
+	
+	@Test
+	public void testException() {
+	    Throwable exception = assertThrows(
+	            IllegalArgumentException.class, () -> {
+	                opr.discount50(0);
+	            }
+	    );
+	 
+	    assertEquals("Czesne wynosz¹ 0!", exception.getMessage());     
+	}
 
 }

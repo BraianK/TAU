@@ -8,12 +8,20 @@ import studentdatabaseapp.Student;
 import studentdatabaseapp.StudentOperations;
 
 class StudentOperationsTest {
+	StudentOperations opr = new StudentOperations();  
 
 	@Test
     public void discountTest() {
-        StudentOperations opr = new StudentOperations();   
+         
         float result = opr.discount(600);
         assertEquals(180, result);
     }
+	@Test
+    public void isTuitionToPayTest() {
+		float tuitionBalance = 600;
+        boolean isTuitionToPay = opr.isTuitionToPay(tuitionBalance);
+        assertEquals(true, isTuitionToPay);
+    }
+	
 
 }

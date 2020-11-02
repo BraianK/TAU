@@ -38,7 +38,7 @@ class StudentOperationsTest {
 	            }
 	    );
 	 
-	    assertEquals("Czesne wynosz¹ 0!", exception.getMessage());     
+	    assertEquals("Czesne jest uregulowane!", exception.getMessage());     
 	}
 
 }

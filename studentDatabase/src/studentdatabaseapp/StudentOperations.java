@@ -16,7 +16,7 @@ public class StudentOperations {
 	}
 	public float discount50(float tuitionBalance) {
 		if(tuitionBalance == 0) {
-			throw new IllegalArgumentException("Czesne wynosz¹ 0!");
+			throw new IllegalArgumentException("Czesne jest uregulowane!");
 		}else {
 			return (float) (tuitionBalance * 0.5);
 		}

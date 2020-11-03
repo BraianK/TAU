@@ -39,5 +39,12 @@ class StudentOperationsTest {
 	 
 	    assertEquals("Czesne jest uregulowane!", exception.getMessage());     
 	}
+	@Test
+    public void testDiscountSameTest() {
+         
+        double result = opr.discount(600);
+        double expected = 180;
+        assertNotSame(expected, result);
+    }
 
 }
